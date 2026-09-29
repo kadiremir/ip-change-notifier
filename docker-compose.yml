@@ -1,0 +1,11 @@
+services:
+  ip-notifier:
+    build: .
+    container_name: ip-change-notifier
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ip-state:/data
+
+volumes:
+  ip-state:
