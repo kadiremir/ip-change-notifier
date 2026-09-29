@@ -32,7 +32,7 @@ STATE_FILE = Path(
     os.environ.get("STATE_FILE") or Path.home() / ".ip-change-notifier" / "state.json"
 )
 NOTIFY_ON_START = os.environ.get("NOTIFY_ON_START", "false").lower() in ("1", "true", "yes")
-HOSTNAME_LABEL = os.environ.get("LABEL", "")
+HOSTNAME_LABEL = os.environ.get("LABEL") or "my-pc"
 
 IP_SERVICES = [
     "https://api.ipify.org",
